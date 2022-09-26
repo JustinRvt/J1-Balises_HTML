@@ -1,0 +1,26 @@
+/* Mes styles */
+
+body {
+    /* on déclare la variable couleur principale */
+    --main-color:#f33832;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+strong {
+    font-weight: normal;
+}
+
+.red {
+    color: var(--main-color);
+}
+
+.bgRed {
+    background-color: var(--main-color);
+}
+
+.text-center {
+    text-align: center;
+}

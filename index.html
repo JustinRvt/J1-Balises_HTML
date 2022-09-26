@@ -2,20 +2,157 @@
 <!DOCTYPE html>
 <!-- Langue + ouverture de notre documemnt -->
 <html lang="fr">
-    <!-- La balise head est l'en-tête de notre document -->
-<head>
+  <!-- La balise head est l'en-tête de notre document -->
+  <head>
     <!-- Les balises meta  -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nous découvrons ici les premières balises HTML">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nous découvrons ici les premières balises HTML"
+    />
+    <!-- On va lier notre fichier CSS de styles à notre page HTML -->
+    <link rel="stylesheet" href="assets/css/main.css" />
     <!-- c'est notre titre mais c'est aussi le texte qui s'affiche dans l'onglet
          du navigateur-->
     <title>Les balises HTML</title>
-</head>
-<!-- C'est le corps du document, la partie affichée dans le navigateur -->
-<body>
-    <!-- Je peux écrire ce que je veux !-->
-    Hello WF3
-</body>
+  </head>
+  <!-- C'est le corps du document, la partie affichée dans le navigateur -->
+  <body>
+    <!-- LES TYPES DE BALISES -->
+
+    <!-- Les balises en paires, par exemple <h1> qui correspond
+        au titre principal de notre page -->
+    <h1>Justin Ravat - Designer & Développeur Web</h1>
+    <!-- Les balises orphelines, comme la balise <img> par exemple-->
+    <img
+      src="assets/img/Justin.jpg"
+      alt="Photo de profil de Justin Ravat"
+      width="240px"
+    />
+    <!-- Attention, par convention on peut fermer une balise orpheline
+    Soit, on l'écrit <img>, ce qui est correct, soit pour une meilleure lecture
+    on l'écrit en la fermant comme ceci <img/>  -->
+
+    <!-- Les attributs sont les "paramètres" de nos balises, 
+        ils viennent les compléter pour donner de nouvelles informations -->
+
+    <balise attribut="valeur" />
+
+    <!-- ORGANISATION DU TEXTE -->
+
+    <!-- On rajoute un bloc de type section -->
+    <section class="bgRed">
+      <!-- On organise le texte avec les Headings-->
+      <!-- Dans notre cas, nous avons un h1, donc un titre principal
+        Nous voulons donc un h2-->
+      <h2 class="red">Coordonnées</h2>
+      <!-- on se sert d'un paragraphe pour donner une indication -->
+      <p>Je suis disponible de suite, contactez moi !</p>
+      <!-- J'utilise une balise address car je vais rentrer mes coocrdonnées -->
+      <address>
+        <!-- On utilise la balise anchor <a></a> pour définir nos liens -->
+        <!-- Dans ce cas précis, on va donner un lien vers notre courriel -->
+        <a href="mailto:justin.ravat@proton.me">justin.ravat@proton.me</a>
+        <!-- pour effectuer un saut de ligne, j'utilise <br> -->
+        <br />
+        <!-- Pareil pour le téléphone -->
+        <a href="tel:+33635783898">+33(0)6-35-78-38-98</a>
+      </address>
+    </section>
+
+    <!-- DEBUT SECTION EXP PRO -->
+    <section>
+      <h2 class="text-center">Expériences professionnelles</h2>
+      <!-- On va utliser la liste non-ordonnées -->
+      <ul>
+        <!-- on y insère des puces -->
+        <li>
+          <!-- On place un titre -->
+          <h3>Formateur chez <span class="red">WebForce 3</span></h3>
+          <p>
+            <!-- On peut mettre en valeur le texte grâce des balises simples -->
+            <i>De 2020 à aujourd'hui</i>, j'interviens <b>aussi bien</b> en centre, ainsi qu'en <u>maison
+                d'arrêt</u>, auprès de <span class="bold red">réfugiés</span> ainsi que de <mark>populations en situation</mark> de
+            <strong>handicap</strong>.
+          </p>
+        </li>
+        <li>
+          <h3>Formateur chez <span class="red">WebForce 3</span></h3>
+          <p>
+            Kitty run to human with blood on mouth from frenzied attack on poor
+            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
+            catnip and act crazy. Love fish i like frogs and 0 gravity and the
+            cat was chasing the mouse.
+          </p>
+        </li>
+        <li>
+          <h3>Formateur chez <span class="red">WebForce 2</span></h3>
+          <p>
+            Kitty run to human with blood on mouth from frenzied attack on poor
+            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
+            catnip and act crazy. Love fish i like frogs and 0 gravity and the
+            cat was chasing the mouse.
+          </p>
+        </li>
+        <li>
+          <h3>Formateur chez <span class="red">WebForce 1</span></h3>
+          <p>
+            Kitty run to human with blood on mouth from frenzied attack on poor
+            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
+            catnip and act crazy. Love fish i like frogs and 0 gravity and the
+            cat was chasing the mouse.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <!-- // FIN SECTION EXP PRO -->
+
+    <!-- DEBUT SECTION FORMATIONS -->
+    <section>
+      <h2 class="text-center">Formations & Diplômes obtenus</h2>
+      <!-- On va utliser la liste non-ordonnées -->
+      <ul>
+        <!-- on y insère des puces -->
+        <li>
+          <!-- On place un titre -->
+          <h3>Super diplôme obtenu chez <span class="red">Brossard</span></h3>
+          <p>
+            Depuis 2020, j'interviens aussi bien en centre, ainsi qu'en maison
+            d'arrêt, auprès de réfugiés ainsi que de populations en situation de
+            handicap.
+          </p>
+        </li>
+        <li>
+          <h3>Formateur chez <span class="red">WebForce 3</span></h3>
+          <p>
+            Kitty run to human with blood on mouth from frenzied attack on poor
+            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
+            catnip and act crazy. Love fish i like frogs and 0 gravity and the
+            cat was chasing the mouse.
+          </p>
+        </li>
+        <li>
+          <h3>Formateur chez <span class="red">WebForce 2</span></h3>
+          <p>
+            Kitty run to human with blood on mouth from frenzied attack on poor
+            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
+            catnip and act crazy. Love fish i like frogs and 0 gravity and the
+            cat was chasing the mouse.
+          </p>
+        </li>
+        <li>
+          <h3>Formateur chez <span class="red">WebForce 1</span></h3>
+          <p>
+            Kitty run to human with blood on mouth from frenzied attack on poor
+            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
+            catnip and act crazy. Love fish i like frogs and 0 gravity and the
+            cat was chasing the mouse.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <!-- // FIN SECTION FORMATIONS -->
+  </body>
 </html>
