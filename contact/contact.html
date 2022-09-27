@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1>
+        Contactez moi
+    </h1>
+    <!-- J'insère un formulaire -->
+    <!-- l'attribut action va chercher une page de logique de programmation afin d'échanger avec le back tandis que l'attribut method nous permet soit de récupérer des informations avec get, soit en envoyer avec post -->
+    <form action="../assets/forms/send.php" method="post">
+        <!-- la balise label indique à l'utilisateur quelle est l'action à effectuer -->
+        <label for="name">
+            Veuillez entrer votre nom
+        </label>
+        <!-- La balise input nous permet d'afficher un champ de saisie afin de dialoguer avec l'utilisateur -->
+        <input type="text" 
+               name="name" 
+               id="name">
+
+        <label for="email">
+            Veuillez rentrer votre courriel
+        </label>
+        <!-- l'attribut required fait en sorte que le navigateur n'enverra JAMAIS les données du formulaire si ce champ précis est vide -->
+        <input type="email"
+               name="email"
+               id="email"
+               required>
+        <!-- on envoie les données du formulaire -->
+        <input type="submit" value="Envoyer">
+        
+    </form>
+    <!-- LIEN VERS LA PAGE D'ACCUEIL -->
+    <a href="../index.html">Retour à l'accueil</a>
+</body>
+</html>
