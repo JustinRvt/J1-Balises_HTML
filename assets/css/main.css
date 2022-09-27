@@ -1,8 +1,34 @@
 /* Mes styles */
+html {
+     /* on va rendre le scroll plus fluide */
+     scroll-behavior: smooth;
+}
 
 body {
     /* on déclare la variable couleur principale */
     --main-color:#f33832;
+   
+}
+
+/* Je décide que TOUS mes liens ne soient pas surlignés */
+a {
+    text-decoration: none;
+    /* la couleur de tous les liens */
+    color:#6c316e;
+}
+/* Je décide de la couleur de mes liens visités */
+a:visited {
+    color:green;
+}
+/* Je choisis la couleur / comportement du lien au survol de la souris */
+a:hover {
+    background:orange;
+    color:black;
+    text-decoration: underline;
+}
+
+h1:hover {
+    color:black;
 }
 
 .bold {
@@ -16,11 +42,20 @@ strong {
 .red {
     color: var(--main-color);
 }
-
+.blue {
+    color:blue;
+}
 .bgRed {
     background-color: var(--main-color);
 }
 
 .text-center {
     text-align: center;
+}
+
+.dinguerie {
+    color: blue;
+    color:red;
+    color:yellowgreen;
+    color:violet;
 }

@@ -24,7 +24,7 @@
 
     <!-- Les balises en paires, par exemple <h1> qui correspond
         au titre principal de notre page -->
-    <h1>Justin Ravat - Designer & Développeur Web</h1>
+    <h1 class="dinguerie" style="color:red;">Justin Ravat - Designer & Développeur Web</h1>
     <!-- Les balises orphelines, comme la balise <img> par exemple-->
     <img
       src="assets/img/Justin.jpg"
@@ -45,6 +45,14 @@
 
     <!-- LIEN VERS NOTRE PAGE CONTACT -->
     <a href="contact/contact.html">Contactez moi</a>
+    
+    <!-- LIENS VERS LES SECTIONS DE NOTRE PAGE -->
+    <p>Accès rapide</p>
+    <!-- on lie notre href avec l'id du bloc souhaité -->
+    <!-- on rajoute une infobulle avec l'attribut title -->
+    <a href="#experiences" title="Accès direct à mes expériences professionnelles">Expériences professionnelles</a>
+    <br>
+    <a href="#formations" title="Accédez à mon cursus de formation">Formations</a>
 
     <!-- ORGANISATION DU TEXTE -->
 
@@ -70,7 +78,7 @@
 
     <!-- DEBUT SECTION EXP PRO -->
     <section>
-      <h2 class="text-center">Expériences professionnelles</h2>
+      <h2 class="text-center" id="experiences">Expériences professionnelles</h2>
       <!-- On va utliser la liste non-ordonnées -->
       <ul>
         <!-- on y insère des puces -->
@@ -125,7 +133,7 @@
 
     <!-- DEBUT SECTION FORMATIONS -->
     <section>
-      <h2 class="text-center">Formations & Diplômes obtenus</h2>
+      <h2 class="text-center" id="formations">Formations & Diplômes obtenus</h2>
       <!-- On va utliser la liste non-ordonnées -->
       <ul>
         <!-- on y insère des puces -->
