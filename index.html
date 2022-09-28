@@ -12,6 +12,11 @@
       name="description"
       content="Nous découvrons ici les premières balises HTML"
     />
+    <!-- On intègre la police font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <!-- On va lier notre fichier CSS de styles à notre page HTML -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- c'est notre titre mais c'est aussi le texte qui s'affiche dans l'onglet
@@ -21,160 +26,194 @@
   <!-- C'est le corps du document, la partie affichée dans le navigateur -->
   <body>
     <!-- LES TYPES DE BALISES -->
-
-    <!-- Les balises en paires, par exemple <h1> qui correspond
+    <!-- Le haut de notre page, header. Contient généralement la nav -->
+    <header>
+      <!-- Les balises en paires, par exemple <h1> qui correspond
         au titre principal de notre page -->
-    <h1 class="dinguerie" style="color:red;">Justin Ravat - Designer & Développeur Web</h1>
-    <!-- Les balises orphelines, comme la balise <img> par exemple-->
-    <img
-      src="assets/img/Justin.jpg"
-      alt="Photo de profil de Justin Ravat"
-      width="240px"
-    />
-    <!-- Attention, par convention on peut fermer une balise orpheline
-    Soit, on l'écrit <img>, ce qui est correct, soit pour une meilleure lecture
-    on l'écrit en la fermant comme ceci <img/>  -->
+      <h1 class="dinguerie" style="color: red">
+        Justin Ravat - Designer & Développeur Web
+      </h1>
+      <!-- Les balises orphelines, comme la balise <img> par exemple-->
+      <div class="flex">
+        <img
+          src="assets/img/Justin.jpg"
+          alt="Photo de profil de Justin Ravat"
+          width="240px"
+        />
+        <!-- Attention, par convention on peut fermer une balise orpheline
+        Soit, on l'écrit <img>, ce qui est correct, soit pour une meilleure lecture
+        on l'écrit en la fermant comme ceci <img/>  -->
 
-    <!-- Les attributs sont les "paramètres" de nos balises, 
+        <!-- Les attributs sont les "paramètres" de nos balises, 
         ils viennent les compléter pour donner de nouvelles informations -->
 
-    <balise attribut="valeur" />
+        <!-- <balise attribut="valeur" /> -->
 
-    <!-- LIEN VERS NOTRE PORTFOLIO -->
-    <a href="portfolio.html">Découvrez mes créations</a>
+        <nav>
+          <div class="flex column">
+            <!-- LIEN VERS NOTRE PORTFOLIO -->
+            <a href="portfolio.html">Découvrez mes créations</a>
 
-    <!-- LIEN VERS NOTRE PAGE CONTACT -->
-    <a href="contact/contact.html">Contactez moi</a>
-    
-    <!-- LIENS VERS LES SECTIONS DE NOTRE PAGE -->
-    <p>Accès rapide</p>
-    <!-- on lie notre href avec l'id du bloc souhaité -->
-    <!-- on rajoute une infobulle avec l'attribut title -->
-    <a href="#experiences" title="Accès direct à mes expériences professionnelles">Expériences professionnelles</a>
-    <br>
-    <a href="#formations" title="Accédez à mon cursus de formation">Formations</a>
+            <!-- LIEN VERS NOTRE PAGE CONTACT -->
+            <a href="contact/contact.html">Contactez moi</a>
 
+            <!-- Lorsque les logiciels d'aide à la lecture tombent sur une icone pas interprétable, on utilise un aria-label afin d'indiquer la conduite à tenir -->
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="Devenez fan sur Facebook !"
+            >
+              <!-- J'insère une icone facebook -->
+              <i class="fa-brands fa-facebook blue" aria-hidden="true"></i>
+              <span>Facebook</span>
+            </a>
+          </div>
+          <!-- LIENS VERS LES SECTIONS DE NOTRE PAGE -->
+          <p>Accès rapide</p>
+          <!-- on lie notre href avec l'id du bloc souhaité -->
+          <!-- on rajoute une infobulle avec l'attribut title -->
+          <a
+            href="#experiences"
+            title="Accès direct à mes expériences professionnelles"
+            >Expériences professionnelles</a
+          >
+          <br />
+          <a href="#formations" title="Accédez à mon cursus de formation"
+            >Formations</a
+          >
+        </nav>
+      </div>
+    </header>
     <!-- ORGANISATION DU TEXTE -->
+    <!-- La partie principale du site entre le header et le footer -->
+    <main>
+      <!-- On rajoute un bloc de type section -->
+      <section class="bgRed">
+        <!-- On organise le texte avec les Headings-->
+        <!-- Dans notre cas, nous avons un h1, donc un titre principal
+          Nous voulons donc un h2-->
+        <h2 class="red">Coordonnées</h2>
+        <!-- on se sert d'un paragraphe pour donner une indication -->
+        <p>Je suis disponible de suite, contactez moi !</p>
+        <!-- J'utilise une balise address car je vais rentrer mes coocrdonnées -->
+        <address>
+          <!-- On utilise la balise anchor <a></a> pour définir nos liens -->
+          <!-- Dans ce cas précis, on va donner un lien vers notre courriel -->
+          <a href="mailto:justin.ravat@proton.me">justin.ravat@proton.me</a>
+          <!-- pour effectuer un saut de ligne, j'utilise <br> -->
+          <br />
+          <!-- Pareil pour le téléphone -->
+          <a href="tel:+33635783898">+33(0)6-35-78-38-98</a>
+        </address>
+      </section>
 
-    <!-- On rajoute un bloc de type section -->
-    <section class="bgRed">
-      <!-- On organise le texte avec les Headings-->
-      <!-- Dans notre cas, nous avons un h1, donc un titre principal
-        Nous voulons donc un h2-->
-      <h2 class="red">Coordonnées</h2>
-      <!-- on se sert d'un paragraphe pour donner une indication -->
-      <p>Je suis disponible de suite, contactez moi !</p>
-      <!-- J'utilise une balise address car je vais rentrer mes coocrdonnées -->
-      <address>
-        <!-- On utilise la balise anchor <a></a> pour définir nos liens -->
-        <!-- Dans ce cas précis, on va donner un lien vers notre courriel -->
-        <a href="mailto:justin.ravat@proton.me">justin.ravat@proton.me</a>
-        <!-- pour effectuer un saut de ligne, j'utilise <br> -->
-        <br />
-        <!-- Pareil pour le téléphone -->
-        <a href="tel:+33635783898">+33(0)6-35-78-38-98</a>
-      </address>
-    </section>
-
-    <!-- DEBUT SECTION EXP PRO -->
-    <section>
-      <h2 class="text-center" id="experiences">Expériences professionnelles</h2>
-      <!-- On va utliser la liste non-ordonnées -->
-      <ul>
-        <!-- on y insère des puces -->
-        <li>
-          <!-- On place un titre -->
-          <h3>
-            Formateur chez
-            <span class="red"> 
+      <!-- DEBUT SECTION EXP PRO -->
+      <section aria-labelledby="experiences">
+        <h2 class="text-center" id="experiences">
+          Expériences professionnelles
+        </h2>
+        <!-- On va utliser la liste non-ordonnées -->
+        <ul>
+          <!-- on y insère des puces -->
+          <li>
+            <!-- On place un titre -->
+            <h3>
+              Formateur chez
+              <span class="red">
                 <!-- on crée un lien vers u site externe -->
                 <!-- l'attribut target avec la valeur _blank nous permet d'ouvrir un nouvel onglet -->
-              <a href="https://www.wf3.fr/"                 target="_blank">WebForce 3</a>
-            </span>
-          </h3>
-          <p>
-            <!-- On peut mettre en valeur le texte grâce des balises simples -->
-            <i>De 2020 à aujourd'hui</i>, j'interviens <b>aussi bien</b> en
-            centre, ainsi qu'en <u>maison d'arrêt</u>, auprès de
-            <span class="bold red">réfugiés</span> ainsi que de
-            <mark>populations en situation</mark> de <strong>handicap</strong>.
-          </p>
-        </li>
-        <li>
-          <h3>Formateur chez <span class="red">WebForce 3</span></h3>
-          <p>
-            Kitty run to human with blood on mouth from frenzied attack on poor
-            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
-            catnip and act crazy. Love fish i like frogs and 0 gravity and the
-            cat was chasing the mouse.
-          </p>
-        </li>
-        <li>
-          <h3>Formateur chez <span class="red">WebForce 2</span></h3>
-          <p>
-            Kitty run to human with blood on mouth from frenzied attack on poor
-            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
-            catnip and act crazy. Love fish i like frogs and 0 gravity and the
-            cat was chasing the mouse.
-          </p>
-        </li>
-        <li>
-          <h3>Formateur chez <span class="red">WebForce 1</span></h3>
-          <p>
-            Kitty run to human with blood on mouth from frenzied attack on poor
-            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
-            catnip and act crazy. Love fish i like frogs and 0 gravity and the
-            cat was chasing the mouse.
-          </p>
-        </li>
-      </ul>
-    </section>
-    <!-- // FIN SECTION EXP PRO -->
+                <a href="https://www.wf3.fr/" target="_blank">WebForce 3</a>
+              </span>
+            </h3>
+            <p>
+              <!-- On peut mettre en valeur le texte grâce des balises simples -->
+              <i>De 2020 à aujourd'hui</i>, j'interviens <b>aussi bien</b> en
+              centre, ainsi qu'en <u>maison d'arrêt</u>, auprès de
+              <span class="bold red">réfugiés</span> ainsi que de
+              <mark>populations en situation</mark> de
+              <strong>handicap</strong>.
+            </p>
+          </li>
+          <li>
+            <h3>Formateur chez <span class="red">WebForce 3</span></h3>
+            <p>
+              Kitty run to human with blood on mouth from frenzied attack on
+              poor innocent mouse, don't i look cute? throwup on your pillow,
+              yet sniff catnip and act crazy. Love fish i like frogs and 0
+              gravity and the cat was chasing the mouse.
+            </p>
+          </li>
+          <li>
+            <h3>Formateur chez <span class="red">WebForce 2</span></h3>
+            <p>
+              Kitty run to human with blood on mouth from frenzied attack on
+              poor innocent mouse, don't i look cute? throwup on your pillow,
+              yet sniff catnip and act crazy. Love fish i like frogs and 0
+              gravity and the cat was chasing the mouse.
+            </p>
+          </li>
+          <li>
+            <h3>Formateur chez <span class="red">WebForce 1</span></h3>
+            <p>
+              Kitty run to human with blood on mouth from frenzied attack on
+              poor innocent mouse, don't i look cute? throwup on your pillow,
+              yet sniff catnip and act crazy. Love fish i like frogs and 0
+              gravity and the cat was chasing the mouse.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <!-- // FIN SECTION EXP PRO -->
 
-    <!-- DEBUT SECTION FORMATIONS -->
-    <section>
-      <h2 class="text-center" id="formations">Formations & Diplômes obtenus</h2>
-      <!-- On va utliser la liste non-ordonnées -->
-      <ul>
-        <!-- on y insère des puces -->
-        <li>
-          <!-- On place un titre -->
-          <h3>Super diplôme obtenu chez <span class="red">Brossard</span></h3>
-          <p>
-            Depuis 2020, j'interviens aussi bien en centre, ainsi qu'en maison
-            d'arrêt, auprès de réfugiés ainsi que de populations en situation de
-            handicap.
-          </p>
-        </li>
-        <li>
-          <h3>Formateur chez <span class="red">WebForce 3</span></h3>
-          <p>
-            Kitty run to human with blood on mouth from frenzied attack on poor
-            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
-            catnip and act crazy. Love fish i like frogs and 0 gravity and the
-            cat was chasing the mouse.
-          </p>
-        </li>
-        <li>
-          <h3>Formateur chez <span class="red">WebForce 2</span></h3>
-          <p>
-            Kitty run to human with blood on mouth from frenzied attack on poor
-            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
-            catnip and act crazy. Love fish i like frogs and 0 gravity and the
-            cat was chasing the mouse.
-          </p>
-        </li>
-        <li>
-          <h3>Formateur chez <span class="red">WebForce 1</span></h3>
-          <p>
-            Kitty run to human with blood on mouth from frenzied attack on poor
-            innocent mouse, don't i look cute? throwup on your pillow, yet sniff
-            catnip and act crazy. Love fish i like frogs and 0 gravity and the
-            cat was chasing the mouse.
-          </p>
-        </li>
-      </ul>
-    </section>
-    <!-- // FIN SECTION FORMATIONS -->
+      <!-- DEBUT SECTION FORMATIONS -->
+      <section aria-labelledby="formations">
+        <h2 class="text-center" id="formations">
+          Formations & Diplômes obtenus
+        </h2>
+        <!-- On va utliser la liste non-ordonnées -->
+        <ul>
+          <!-- on y insère des puces -->
+          <li>
+            <!-- On place un titre -->
+            <h3>Super diplôme obtenu chez <span class="red">Brossard</span></h3>
+            <p>
+              Depuis 2020, j'interviens aussi bien en centre, ainsi qu'en maison
+              d'arrêt, auprès de réfugiés ainsi que de populations en situation
+              de handicap.
+            </p>
+          </li>
+          <li>
+            <h3>Formateur chez <span class="red">WebForce 3</span></h3>
+            <p>
+              Kitty run to human with blood on mouth from frenzied attack on
+              poor innocent mouse, don't i look cute? throwup on your pillow,
+              yet sniff catnip and act crazy. Love fish i like frogs and 0
+              gravity and the cat was chasing the mouse.
+            </p>
+          </li>
+          <li>
+            <h3>Formateur chez <span class="red">WebForce 2</span></h3>
+            <p>
+              Kitty run to human with blood on mouth from frenzied attack on
+              poor innocent mouse, don't i look cute? throwup on your pillow,
+              yet sniff catnip and act crazy. Love fish i like frogs and 0
+              gravity and the cat was chasing the mouse.
+            </p>
+          </li>
+          <li>
+            <h3>Formateur chez <span class="red">WebForce 1</span></h3>
+            <p>
+              Kitty run to human with blood on mouth from frenzied attack on
+              poor innocent mouse, don't i look cute? throwup on your pillow,
+              yet sniff catnip and act crazy. Love fish i like frogs and 0
+              gravity and the cat was chasing the mouse.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <!-- // FIN SECTION FORMATIONS -->
+    </main>
+    <!-- Notre pied de page (copyright, liens utiles, newsletter, etc) -->
+    <footer>Mon footer @Copyright WF3</footer>
   </body>
 </html>

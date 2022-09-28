@@ -56,6 +56,14 @@ strong {
 .dinguerie {
     color: blue;
     color:red;
-    color:yellowgreen;
+    color:yellowgreen!important;
     color:violet;
+}
+
+.flex {
+    display:flex;
+}
+
+.column {
+    flex-direction: column;
 }

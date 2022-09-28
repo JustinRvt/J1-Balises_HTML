@@ -1,0 +1,118 @@
+h1 {
+    font-size:100px;
+}
+
+h2 {
+    font-size:60px;
+}
+
+
+
+section div {
+  /* largeur */
+  width: 200px;
+  /*  hauteur */
+  height: 200px;
+  /* bordure */
+  border: 1px solid black;
+  /* marges extérieures */
+  margin: 40px;
+  /* on va rajouter des bordures */
+  border-radius: 50%;
+  /* on va rajouter une ombre  */
+  /* box-shadow: 10px 5px 5px rgb(0, 0, 0, 0.35); */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* Je sélectionne la 1ère div */
+div:first-of-type {
+  /* couleur de fond */
+  background: violet;
+}
+/* Je sélectionne la 2ème div */
+div:nth-child(2) {
+  background: green;
+}
+/* Je sélectionne la dernière div */
+div:last-of-type {
+  background: red; 
+}
+
+/* J'applique flexbox sur la section parente de mes div */
+/* section {
+  display: flex; */
+  /* aligmennt columne : column */
+  /* flex-direction: column; */
+  /* alignement colonne inversée */
+  /* flex-direction: column-reverse; */
+  /* alignement rangée inversé     */
+  /* flex-direction: row-reverse; */
+  /* alignement en rang : row */
+  /* flex-direction: row;
+} */
+
+
+/* Je crée des helpers */
+.flex {
+    display: flex;
+}
+/* Déplacement sur l'axe principal (X), on utilise la propriété justify-content*/
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+/* Déplacement sur l'axe secondaire (Y), on utilise la propriété align-items */
+
+.stretch {
+    align-items:stretch;
+}
+
+.align-flex-start {
+    align-items:flex-start
+}
+
+.align-flex-end {
+    align-items:flex-end
+}
+
+.align-center {
+    align-items:center;
+}
+.text-center {
+    text-align: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+
+.separation {
+    height:50px;
+    background-color: black;
+}
+
+.container {
+    /* on passe une marge intérieure */
+    padding:5px;
+    background:yellow;
+    height:600px;
+}
