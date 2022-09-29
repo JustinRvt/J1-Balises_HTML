@@ -1,0 +1,134 @@
+.container {
+  background-color: cadetblue;
+  padding: 2em;
+}
+
+.column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.btn {
+  background: rgb(255, 97, 23);
+  color: black;
+  border: 2px solid rgb(255, 97, 23);
+  font-size: 3vw;
+  cursor: pointer;
+  padding: 1em;
+  width: 500px;
+  margin: 50px auto;
+  border-radius: 20px;
+  /* on applique une transformation (facultative quand elle à 1)*/
+  transform: scale(0.5);
+  /* On ajoute la durée afin de fluidifier l'animation */
+  transition: 1s; /* ou bien 1000ms */
+}
+
+.btn:hover {
+  /*  on augmente la valeur afin  */
+  transform: scale(1.25);
+  background: black;
+  color: rgb(255, 97, 23);
+  border: 2px solid #fff;
+}
+
+form {
+  width: 500px;
+  margin: auto;
+}
+
+form input {
+  border: 2px solid #fff;
+  border-radius: 100em;
+  color: darkblue;
+  font-size: 2.5em;
+  outline: none;
+  width: 100%;
+}
+
+/* on va utiliser la pseudo classe focus lorsque notre input est sélectionné */
+form input:focus {
+  border: 5px solid #336335;
+}
+
+/* on va utiliser la pseudo classe invalid afin de vérifier l'état des données saisies */
+/* pour affiner tout cela, nous alons utiliser la pseudo classe not() combinée à focus :
+    :not() passera à true lorsque son sélecteur est à false
+    :not() est true quand l'input N'EST PAS :focus
+    ici, si l'input n'est pas en :focus ET si  :invalid est true, la couleur rouge apparaît
+    quand notre utilisateur a terminé de rentrer son courriel
+*/
+/* form input:invalid {...} */
+form input:not(:focus):invalid {
+  border: 5px solid red;
+  background: red;
+  color: white;
+}
+
+.balle {
+  width: 200px;
+  height: 200px;
+  background: blueviolet;
+  border-radius: 50%;
+  margin: auto;
+  transition: 400ms ease-in-out;
+}
+
+.btn2 {
+  background: rgb(255, 97, 23);
+  color: black;
+  font-size: 3vw;
+  cursor: pointer;
+  padding: 1em;
+  width: 500px;
+  margin: 50px auto;
+  border-radius: 20px;
+  /* on applique une transformation (facultative quand elle à 1)*/
+  transform: scale(0.5);
+  /* On ajoute la durée afin de fluidifier l'animation */
+  transition: 1s; /* ou bien 1000ms */
+}
+
+.btn2:hover + .balle {
+  transform: scale(1.25);
+  transition: 400ms;
+  background: chartreuse;
+}
+
+.btn3, .btn4 {
+  background: rgb(255, 97, 23);
+  color: black;
+  font-size: 3vw;
+  cursor: pointer;
+  padding: 1em;
+  width: 500px;
+  margin: 50px auto;
+  border-radius: 20px;
+}
+
+.progres, .progres2 {
+  width: 500px;
+  height: 30px;
+  border: 1px solid black;
+  margin: auto;
+  padding: 2px;
+}
+
+.barre-progres {
+  background: chartreuse;
+  height: 30px;
+  /* scaleX(0) fait disparaître nottre bg */
+  transform: scaleX(0);
+  /* transform-origin fonctionne avec 2 paramètres, X et Y (gauche et top) */
+  transform-origin: 0 50% ;
+  transition: 3000ms cubic-bezier(.72,.13,.5,.77);
+}
+
+.btn3:active + .progres > .barre-progres {
+  transform: scaleX(1);
+}
+
+.barre-progres2 {
+    background: chartreuse;
+    height: 30px;
+}
