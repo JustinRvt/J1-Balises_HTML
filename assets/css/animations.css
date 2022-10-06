@@ -1,3 +1,8 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+
 .container {
   background-color: cadetblue;
   padding: 2em;
@@ -121,7 +126,7 @@ form input:not(:focus):invalid {
   transform: scaleX(0);
   /* transform-origin fonctionne avec 2 paramètres, X et Y (gauche et top) */
   transform-origin: 0 50% ;
-  transition: 3000ms cubic-bezier(.72,.13,.5,.77);
+  transition: 2000ms cubic-bezier(.72,.13,.5,.77);
 }
 
 .btn3:active + .progres > .barre-progres {
@@ -131,4 +136,19 @@ form input:not(:focus):invalid {
 .barre-progres2 {
     background: chartreuse;
     height: 30px;
+}
+
+.btn4:active > .barre-progres2 {
+    transform: scaleX(1);
+    animation-name: progression-barre;
+    animation-duration: 3000ms;
+}
+
+@keyframes progression-barre {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
